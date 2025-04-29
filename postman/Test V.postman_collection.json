@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "1d12aa7c-b3d0-4c5d-859e-2501a704b11e",
+		"name": "Test V",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28781544",
+		"_collection_link": "https://vonage-0875.postman.co/workspace/Task~9c5f6ece-040c-4fc7-b46c-6f5fd3d765e1/collection/28781544-1d12aa7c-b3d0-4c5d-859e-2501a704b11e?action=share&source=collection_link&creator=28781544"
+	},
+	"item": [
+		{
+			"name": "Register user",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "n1EGdjQcpylLH5PH",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "dbff284a",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"Alina\",\n  \"email\": \"osinskayaalina@gmail.com\",\n  \"phone\": \"48692028943\",\n  \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Activate account by verification code",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "n1EGdjQcpylLH5PH",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "dbff284a",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"Alina\",\n  \"verificationCode\": \"5852\",\n  \"requestId\": \"6500d2da-aae5-401e-b703-19dac479581e\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user/activate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"activate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
